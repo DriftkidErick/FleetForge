@@ -3,6 +3,8 @@ package com.fleetforge.service;
 import com.fleetforge.entity.Vehicle;
 import com.fleetforge.repository.VehicleRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
@@ -24,7 +26,8 @@ public class VehicleService {
     //Get by One vehicle ID
     public Vehicle getVehicleById(Long id){
         return vehicleRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Vehicle not found!"));
+                .orElseThrow(() -> new ResponseStatusException
+                        (HttpStatus.NOT_FOUND, "Vehicle not found!"));
     }
 
     //Create a vehicle

@@ -9,10 +9,10 @@ import jakarta.validation.constraints.NotBlank;
 public class Driver extends BaseEntity{
 
     @NotBlank(message = "First name is required!")
-    private String fName;
+    private String firstName;
 
     @NotBlank(message = "Last name is required!")
-    private String lName;
+    private String lastName;
 
     @NotBlank(message = "Email is required!")
     @Email(message = "Email must be valid!")
@@ -26,24 +26,24 @@ public class Driver extends BaseEntity{
     private String status;
 
     public String getFullName(){
-        return fName + " " + lName;
+        return firstName + " " + lastName;
     }
 
     //Getter and Setters
-    public String getfName() {
-        return fName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setfName(String fName) {
-        this.fName = fName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getlName() {
-        return lName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setlName(String lName) {
-        this.lName = lName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmail() {
