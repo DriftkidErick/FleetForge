@@ -23,6 +23,12 @@ public class VehicleController {
         return vehicleService.getAllVehicles();
     }
 
+    //Search Vehicle
+    @GetMapping("/search")
+    public List<Vehicle> searchVehicles(@RequestParam String term) {
+        return vehicleService.searchVehicles(term);
+    }
+
     @GetMapping("/{id}")
     public Vehicle getVehicleById(@PathVariable Long id){
         return vehicleService.getVehicleById(id);

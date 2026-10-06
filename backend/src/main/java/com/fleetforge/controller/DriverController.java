@@ -24,6 +24,12 @@ public class DriverController {
         return driverService.getAllDrivers();
     }
 
+    //Search
+    @GetMapping("/search")
+    public List<Driver> searchDrivers(@RequestParam String term) {
+        return driverService.searchDrivers(term);
+    }
+
     @GetMapping("/{id}")
     public Driver getDriverById(@PathVariable Long id){
         return driverService.getDriverById(id);

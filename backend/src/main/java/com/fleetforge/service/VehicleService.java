@@ -57,9 +57,20 @@ public class VehicleService {
         vehicleRepository.delete(vehicle);
     }
 
+    //Updates the vehicles status
     public Vehicle updateVehicleStatus(Long id, String status) {
         Vehicle vehicle = getVehicleById(id);
         vehicle.setStatus(status);
         return vehicleRepository.save(vehicle);
+    }
+
+    //The search function
+    public List<Vehicle> searchVehicles(String term) {
+        //If the term is blank or does not exist return all
+        if (term == null || term.isBlank()) {
+            return vehicleRepository.findAll();
+        }
+
+        return vehicleRepository.searchVehicles(term.trim());
     }
 }
