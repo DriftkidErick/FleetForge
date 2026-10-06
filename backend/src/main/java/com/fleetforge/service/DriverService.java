@@ -54,4 +54,10 @@ public class DriverService {
         driverRepository.delete(driver);
     }
 
+    public Driver updateDriverStatus(Long id, String status) {
+        Driver driver = getDriverById(id);
+        driver.setStatus(status);
+        return driverRepository.save(driver);
+    }
+
 }

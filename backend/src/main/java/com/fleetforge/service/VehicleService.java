@@ -56,4 +56,10 @@ public class VehicleService {
         Vehicle vehicle = getVehicleById(id);
         vehicleRepository.delete(vehicle);
     }
+
+    public Vehicle updateVehicleStatus(Long id, String status) {
+        Vehicle vehicle = getVehicleById(id);
+        vehicle.setStatus(status);
+        return vehicleRepository.save(vehicle);
+    }
 }
