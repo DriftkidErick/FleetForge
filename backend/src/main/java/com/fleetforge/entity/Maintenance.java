@@ -77,11 +77,11 @@ public class Maintenance extends BaseEntity {
         this.dueMileage = dueMileage;
     }
 
-    public LocalDate getCompletiionDate() {
+    public LocalDate getCompletionDate() {
         return completiionDate;
     }
 
-    public void setCompletiionDate(LocalDate completiionDate) {
+    public void setCompletionDate(LocalDate completiionDate) {
         this.completiionDate = completiionDate;
     }
 
