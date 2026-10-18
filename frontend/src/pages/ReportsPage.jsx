@@ -26,9 +26,6 @@ function ReportsPage() {
   });
 
   useEffect(() => {
-    loadReports();
-  }, []);
-
   // Loads the vehicle and driver reports
   async function loadReports() {
     try {
@@ -51,6 +48,9 @@ function ReportsPage() {
       setMessage(error.message);
     }
   }
+
+  loadReports();
+}, []);
 
   // Sorts report rows without changing the original array
   function sortRows(rows, sort) {
