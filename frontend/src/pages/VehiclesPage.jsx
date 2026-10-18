@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Search, Plus, Pencil, Trash2, X } from "lucide-react";
 
-const API_URL = "http://localhost:8080/api/vehicles";
+const API_URL = "/api/vehicles";
 
 const emptyVehicle = {
   vin: "",

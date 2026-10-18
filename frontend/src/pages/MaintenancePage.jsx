@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Search, Plus, Pencil, Trash2, X } from "lucide-react";
 
-const MAINTENANCE_URL = "http://localhost:8080/api/maintenance";
-const VEHICLES_URL = "http://localhost:8080/api/vehicles";
-const TYPES_URL = "http://localhost:8080/api/maintenance-types";
+const MAINTENANCE_URL = "/api/maintenance";
+const VEHICLES_URL = "/api/vehicles";
+const TYPES_URL = "/api/maintenance-types";
 
 const emptyMaintenance = {
   vehicleId: "",

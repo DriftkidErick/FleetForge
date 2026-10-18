@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Search, Plus, Pencil, Trash2, X } from "lucide-react";
 
-const DRIVERS_URL = "http://localhost:8080/api/drivers";
-const ASSIGNMENTS_URL = "http://localhost:8080/api/assignments";
+const DRIVERS_URL = "/api/drivers";
+const ASSIGNMENTS_URL = "/api/assignments";
 
 const emptyDriver = {
   firstName: "",

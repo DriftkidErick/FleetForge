@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import { ArrowUpDown, Download } from "lucide-react";
 
 const VEHICLE_REPORT_URL =
-  "http://localhost:8080/api/reports/vehicles";
+  "/api/reports/vehicles";
 
 const DRIVER_REPORT_URL =
-  "http://localhost:8080/api/reports/drivers";
+  "/api/reports/drivers";
 
 const MAINTENANCE_CSV_URL =
-  "http://localhost:8080/api/reports/maintenance/csv";
+  "/api/reports/maintenance/csv";
 
 function ReportsPage() {
   const [vehicleReport, setVehicleReport] = useState(null);

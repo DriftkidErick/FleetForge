@@ -23,19 +23,19 @@ function DashboardPage() {
     async function loadDashboard() {
       try {
         const responses = await Promise.all([
-          fetch("http://localhost:8080/api/vehicles", {
+          fetch("api/vehicles", {
             credentials: "include",
           }),
 
-          fetch("http://localhost:8080/api/drivers", {
+          fetch("/api/drivers", {
             credentials: "include",
           }),
 
-          fetch("http://localhost:8080/api/assignments", {
+          fetch("/api/assignments", {
             credentials: "include",
           }),
 
-          fetch("http://localhost:8080/api/maintenance", {
+          fetch("/api/maintenance", {
             credentials: "include",
           }),
         ]);

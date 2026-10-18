@@ -16,7 +16,7 @@ function LoginPage() {
     loginData.append("password", password);
 
     const response = await fetch(
-      "http://localhost:8080/api/auth/login",
+      "/api/auth/login",
       {
         method: "POST",
         headers: {
