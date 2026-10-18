@@ -31,7 +31,7 @@ public class Maintenance extends BaseEntity {
     @PositiveOrZero(message = "Due mileage cannot be negative!")
     private Integer dueMileage;
 
-    private LocalDate completiionDate;
+    private LocalDate completionDate;
 
     @PositiveOrZero(message = "Completion mileage cannot be negative!")
     private Integer completionMileage;
@@ -78,11 +78,11 @@ public class Maintenance extends BaseEntity {
     }
 
     public LocalDate getCompletionDate() {
-        return completiionDate;
+        return completionDate;
     }
 
-    public void setCompletionDate(LocalDate completiionDate) {
-        this.completiionDate = completiionDate;
+    public void setCompletionDate(LocalDate completionDate) {
+        this.completionDate = completionDate;
     }
 
     public Integer getCompletionMileage() {
