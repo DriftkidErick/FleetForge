@@ -43,7 +43,8 @@ public class SecurityConfig {
                                 "/",
                                 "/index.html",
                                 "/assets/**",
-                                "/favicon.ico"
+                                "/favicon.ico",
+                                "/favicon.svg"
                         ).permitAll()
 
                         // Allows users to submit the login form
@@ -111,7 +112,8 @@ public class SecurityConfig {
         CorsConfiguration configuration = new CorsConfiguration();
 
         configuration.setAllowedOrigins(
-                List.of("http://localhost:5173")
+                List.of("http://localhost:5173",
+                        "https://fleetforge-591716338186.us-east1.run.app")
         );
 
         configuration.setAllowedMethods(
