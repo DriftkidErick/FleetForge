@@ -38,7 +38,18 @@ public class SecurityConfig {
 
                 // Allows login without authentication and protects other endpoints
                 .authorizeHttpRequests(auth -> auth
+                        // Allows the React application files to load
+                        .requestMatchers(
+                                "/",
+                                "/index.html",
+                                "/assets/**",
+                                "/favicon.ico"
+                        ).permitAll()
+
+                        // Allows users to submit the login form
                         .requestMatchers("/api/auth/login").permitAll()
+
+                        // Protects the remaining application endpoints
                         .anyRequest().authenticated()
                 )
 
